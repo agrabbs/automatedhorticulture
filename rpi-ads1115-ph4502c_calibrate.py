@@ -1,5 +1,5 @@
 #!/usr/bin/python
-''' PH4502C Calibration '''
+''' Raspberry Pi, ADS1115, PH4502C Calibration '''
 import board
 import busio
 import time
@@ -23,7 +23,6 @@ def read_voltage(channel):
 
         print(round(avg,2),'V')
         time.sleep(2)
-    
 
 if __name__ == '__main__':
     print('\n\n\n')
@@ -45,7 +44,6 @@ if __name__ == '__main__':
         channel = AnalogIn(ads, ADS.P1)
     else:
         sys.exit('Error selecting an ADS1115 pin.')
-
     print('Adjust potentiometer nearest to BNC socket to ~2.50V')
     print('Starting readings. Press CTRL+C to stop...')
     try:
